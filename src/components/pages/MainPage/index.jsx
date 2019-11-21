@@ -7,7 +7,7 @@ const { Title, Text } = Typography;
 
 class MainPage extends React.Component {
 
-  state={
+  state = {
     error:false
   };
 
