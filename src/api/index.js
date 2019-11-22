@@ -1,6 +1,4 @@
-import makeCustomApi from './customApi';
-
-export const BASE_GHIBLI_URL = 'https://ghibliapi.herokuapp.com';
+import makeCustomApi from "./customApi";
 
 export const makeApi = (dependencies = {}) => ({
   custom: makeCustomApi(dependencies),

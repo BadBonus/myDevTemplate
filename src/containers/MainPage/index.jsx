@@ -1,13 +1,13 @@
 // @flow
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { actions as customActions } from '../../store/custom';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { actions as customActions } from "../../store/custom";
 
-import MainPage from '../../components/pages/MainPage';
+import MainPage from "../../components/pages/MainPage";
 
 const mapStateToProps = (state) => {
   return {
-    films: state.custom.ghibliFilms
+    films: state.custom.ghibliFilms,
   };
 };
 
@@ -16,10 +16,7 @@ const mapDispatchToProps = (dispatch) =>
     {
       getFilms: customActions.getGhibliFilms,
     },
-    dispatch,
+    dispatch
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(MainPage);
+export default connect(mapStateToProps, mapDispatchToProps)(MainPage);

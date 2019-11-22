@@ -1,12 +1,9 @@
-
-import MainPage from '../containers/MainPage';
+import MainPage from "../containers/MainPage";
 
 export const customerRoutes = [
-    {
-        path: '/main',
-        component: MainPage,
-        exact: true,
-    }
+  {
+    path: "/main/newMain",
+    component: MainPage,
+    exact: true,
+  },
 ];
-
-

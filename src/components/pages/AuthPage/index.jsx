@@ -1,9 +1,7 @@
 // @flow
-import * as React from 'react';
-
+import * as React from "react";
 
 class AuthPage extends React.Component {
-
   // shouldComponentUpdate(prevProps) {
   //   return prevProps.location.pathname !== this.props.location.pathname;
   // }
@@ -16,9 +14,7 @@ class AuthPage extends React.Component {
   // }
 
   render() {
-    return (
-        <h2>AuthPage</h2>
-    );
+    return <h2>AuthPage</h2>;
   }
 }
 

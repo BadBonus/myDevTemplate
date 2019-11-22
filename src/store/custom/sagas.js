@@ -1,7 +1,7 @@
-import { actions as types } from './index';
-import { all, put, call, take, takeEvery } from 'redux-saga/effects'
-import makeApi from '../../api'
-import { history } from './../../history';
+import { all, put, call, take, takeEvery } from "redux-saga/effects";
+import { actions as types } from "./index";
+import makeApi from "../../api";
+import { history } from "../../history";
 
 // function* signUpSaga({ payload }) {
 //     try {
@@ -15,7 +15,6 @@ import { history } from './../../history';
 //         else {
 //             response = yield call([auth, auth.registerDealer], { email, password, role, zip, manufacturers });
 //         }
-
 
 //         if (response.data) {
 //             const { token } = response.data.user;
@@ -34,27 +33,19 @@ import { history } from './../../history';
 // }
 
 function* getGhibliFilmsSaga({ payload }) {
-    try {
-        let response;
-        const custom = makeApi().custom;
-        response = yield call([custom, custom.getGhibliFilms]);
+  try {
+    let response;
+    const { custom } = makeApi();
+    response = yield call([custom, custom.getGhibliFilms]);
 
-        if (response.data) {
-            yield put(types.getGhibliFilmsSuccess({ ghibliFilms: response.data }));
-        }
-
-    } catch (error) {
-        yield put(types.processFailure({ error }))
+    if (response.data) {
+      yield put(types.getGhibliFilmsSuccess({ ghibliFilms: response.data }));
     }
+  } catch (error) {
+    yield put(types.processFailure({ error }));
+  }
 }
 
+const customSagas = [takeEvery(types.getGhibliFilms, getGhibliFilmsSaga)];
 
-
-
-
-const customSagas = [
-    takeEvery(types.getGhibliFilms, getGhibliFilmsSaga),
-   
-];
-
-export default customSagas
+export default customSagas;
