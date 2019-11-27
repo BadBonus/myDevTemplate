@@ -6,21 +6,16 @@ import "./style.css";
 const { Title, Text } = Typography;
 
 class MainPage extends React.Component {
-
   // componentDidCatch(error, info) {
-   
+
   // }
 
   // componentDidMount() {
-    
+
   // }
 
   render() {
-    return (
-      <div className="MainPage">
-        Hello world
-      </div>
-    );
+    return <div className="MainPage">Hello world</div>;
   }
 }
 
