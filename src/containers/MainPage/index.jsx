@@ -6,17 +6,9 @@ import { actions as customActions } from "../../store/custom";
 import MainPage from "../../components/pages/MainPage";
 
 const mapStateToProps = (state) => {
-  return {
-    
-  };
+  return {};
 };
 
-const mapDispatchToProps = (dispatch) =>
-  bindActionCreators(
-    {
-      
-    },
-    dispatch
-  );
+const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage);
