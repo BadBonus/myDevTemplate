@@ -10,15 +10,13 @@ const renderRoutes = ({ path, component, exact }) => (
   <Route key={path} exact={exact} path={path} component={component} />
 );
 
-class App extends React.Component {
-  render() {
-    return (
-      <section className="main">
-        <Switch>{customerRoutes.map((route) => renderRoutes(route))}</Switch>
-      </section>
-    );
-  }
-}
+const App = () => {
+  return (
+    <section className="main">
+      <Switch>{customerRoutes.map((route) => renderRoutes(route))}</Switch>
+    </section>
+  );
+};
 
 const mapStateToProps = (state) => {
   // const { decodedJWT } = state.loginForm;
