@@ -1,7 +1,6 @@
 import { all, put, call, take, takeEvery } from "redux-saga/effects";
 import { actions as types } from "./index";
 import makeApi from "../../api";
-import history from "../../history";
 
 // function* signUpSaga({ payload }) {
 //     try {
@@ -32,19 +31,9 @@ import history from "../../history";
 //     }
 // }
 
-function* getGhibliFilmsSaga({ payload }) {
-  try {
-    const { custom } = makeApi();
-    const response = yield call([custom, custom.getGhibliFilms]);
+// расскоментить когда начнется разработка, вставить свои вызовы
+// const customSagas = [takeEvery(types.getGhibliFilms, getGhibliFilmsSaga)];
 
-    if (response.data) {
-      yield put(types.getGhibliFilmsSuccess({ ghibliFilms: response.data }));
-    }
-  } catch (error) {
-    yield put(types.processFailure({ error }));
-  }
-}
-
-const customSagas = [takeEvery(types.getGhibliFilms, getGhibliFilmsSaga)];
-
+// удалить при разработке
+const customSagas = [];
 export default customSagas;

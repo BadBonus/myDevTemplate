@@ -1,7 +1,6 @@
 const initialState = {
   isLoading: false,
   error: null,
-  ghibliFilms: [],
 };
 
 // общий экшен для всех ошибок в Custom
@@ -11,27 +10,15 @@ export const processFailure = (state, { payload }) => ({
   isLoading: false,
 });
 
-export const getGhibliFilms = (state, { payload }) => ({
-  ...state,
-  isLoading: true,
-});
-
-export const getGhibliFilmsSuccess = (state, { payload }) => ({
-  ...state,
-  isLoading: false,
-  ghibliFilms: payload.ghibliFilms,
-});
-
-// export const signUp = (state, { payload }) => ({
-//     ...state,
-//     isLoading: true,
-//     error: undefined,
+// export const getGhibliFilms = (state, { payload }) => ({
+//   ...state,
+//   isLoading: true,
 // });
 
-// export const signUpSuccess = (state, { payload }) => ({
-//     ...state,
-//     isLoading: false,
-//     decodedJWT: payload.decodedJWT
+// export const getGhibliFilmsSuccess = (state, { payload }) => ({
+//   ...state,
+//   isLoading: false,
+//   ghibliFilms: payload.ghibliFilms,
 // });
 
 export default initialState;

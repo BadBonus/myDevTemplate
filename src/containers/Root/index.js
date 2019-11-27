@@ -5,7 +5,6 @@ import { ConnectedRouter } from "connected-react-router";
 
 import { connect } from "react-redux";
 import App from "../App";
-import AuthPage from "../../components/pages/AuthPage";
 import history from "../../history";
 
 const Root = () => {
@@ -13,7 +12,6 @@ const Root = () => {
     <ConnectedRouter history={history}>
       <Switch>
         <Route path="/main" component={App} />
-        <Route path="/login" component={AuthPage} />
         <Route exact path="/" render={() => <Redirect to="/main" />} />
       </Switch>
     </ConnectedRouter>
