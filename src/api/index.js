@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import makeCustomApi from './customApi';
 
 export const BASE_GHIBLI_URL = 'https://ghibliapi.herokuapp.com';

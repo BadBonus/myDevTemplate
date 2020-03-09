@@ -1,12 +1,12 @@
 
 import MainPage from '../containers/MainPage';
 
-export const customerRoutes = [
-    {
-        path: '/main',
-        component: MainPage,
-        exact: true,
-    }
+const customerRoutes = [
+  {
+    path: '/main',
+    component: MainPage,
+    exact: true,
+  },
 ];
 
-
+export default customerRoutes;
